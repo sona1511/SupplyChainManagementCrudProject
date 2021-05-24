@@ -1,8 +1,6 @@
-package com.sprint.controller;
+package com.supply.controller;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -15,30 +13,38 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
-import com.supplychain.beans.Customer;
-import com.supplychain.controller.CustomerController;
+import com.supplychain.beans.Order;
+import com.supplychain.controller.OrderController;
 import com.supplychain.repository.CustomerRepository;
+import com.supplychain.repository.OrderRepository;
 import com.supplychain.service.CustomerService;
+import com.supplychain.service.OrderService;
 
 @RunWith(SpringRunner.class)
-@WebMvcTest(CustomerController.class)
-public class CustomerControllerTest {
+@WebMvcTest(OrderController.class)
+public class OrderControllerTest {
 	@Autowired
 	private MockMvc mockMvc;
+	
 	@MockBean
-	Customer customer;
+	Order order;
 	@MockBean
 	CustomerRepository cRepo;
 	
 	@MockBean
+	OrderRepository oRepo;
+	
+	@MockBean
 	CustomerService cService;
+	@MockBean
+	OrderService oService;
 
 	@Test
 	@DisplayName("Testcase for get request method.")
-	public void getAllCustomer() throws Exception{
-		mockMvc.perform(get("/getCustomers"))
+	public void getAllOrders() throws Exception{
+		mockMvc.perform(get("http://localhost:8080/restaurant/ViewOrders"))
 		.andExpect(status().isOk())
 		.andExpect(content().json("[]"));
-		
+	
 	}
 }

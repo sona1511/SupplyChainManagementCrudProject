@@ -1,4 +1,4 @@
-package com.sprint.service;
+package com.supply.service;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

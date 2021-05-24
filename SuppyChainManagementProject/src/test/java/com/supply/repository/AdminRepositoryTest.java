@@ -1,4 +1,4 @@
-package com.sprint.repository;
+package com.supply.repository;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.Assert.assertNotNull;

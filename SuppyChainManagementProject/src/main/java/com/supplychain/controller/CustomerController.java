@@ -88,7 +88,7 @@ public class CustomerController {
 	 * @return
 	 */
 	/**
-	 * http://localhost:8085/customer/login?customerId=2&password=Juhi@8080
+	 * http://localhost:9095/customer/login?customerId=2&password=Juhi@8080
 	 * @param customerId
 	 * @param password
 	 * @return

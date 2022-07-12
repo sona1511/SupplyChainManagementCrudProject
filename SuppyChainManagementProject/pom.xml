@@ -55,8 +55,19 @@
 	</dependency>
 	</dependencies>
 	<build>
-		<plugins>
-			<plugin>
+	<distributionManagement>
+        <repository>
+            <id>deployment</id>
+            <name>Internal Releases</name>
+            <url>http://43.204.235.108:8081/nexus/content/repositories/releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>deployment</id>
+            <name>Internal Snapshot Releases</name>
+            <url>http://43.204.235.108:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+  <dependencies>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>

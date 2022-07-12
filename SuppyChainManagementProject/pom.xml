@@ -59,12 +59,12 @@
         <repository>
             <id>deployment</id>
             <name>Internal Releases</name>
-            <url>http://13.232.149.21:8081/nexus/content/repositories/releases/</url>
+            <url>http://43.204.235.108:8081/nexus/content/repositories/releases/</url>
         </repository>
         <snapshotRepository>
             <id>deployment</id>
             <name>Internal Snapshot Releases</name>
-            <url>http://13.232.149.21:8081/repository/maven-snapshots/</url>
+            <url>http://43.204.235.108:8081/repository/maven-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
   <dependencies>
